@@ -14,36 +14,37 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
-import {Image} from "antd";
+import { Image } from "antd";
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
       <div className="top">
         {/* <Link to="/" style={{ textDecoration: "none" }}> */}
-        <Image with={200} src="ctu.png"> </Image> 
-          <span className="logo">NHẬT KÝ PHÒNG THÍ NGHIỆM</span>
+        <Image with={200} src="ctu.png"> </Image>
+        <span className="logo">NHẬT KÝ PHÒNG THÍ NGHIỆM</span>
         {/* </Link> */}
       </div>
       <hr />
       <div className="center">
         <ul>
-          <p className="title" style={{fontSize: 20, color: "#333",}}>NHẬT KÝ</p>
+          <p className="title" style={{ fontSize: 20, color: "#333", }}>NHẬT KÝ</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
-              <span style={{fontSize: 15, color: "#333",}}>SINH VIÊN HOẠT ĐỘNG</span>
+              <span style={{ fontSize: 17, color: "#333", }}>SINH VIÊN HOẠT ĐỘNG</span>
             </li>
           </Link>
           <li>
             <DashboardIcon className="icon" />
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <span style={{fontSize: 15, color: "#333",}}>THỐNG KÊ</span>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <span style={{ fontSize: 17, color: "#333", }}>THỐNG KÊ</span>
             </Link>
-           
+
           </li>
-         
-         
+
+
           {/* <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
@@ -80,27 +81,32 @@ const Sidebar = () => {
             <SettingsApplicationsIcon className="icon" />
             <span>Settings</span>
           </li> */}
-          <p className="title" style={{fontSize: 15, color: "#333",}}>MÁY CHỦ</p>
+          <p className="title" style={{ fontSize: 20, color: "#333", }}>MÁY CHỦ</p>
           <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
+            <Link to="/users/uid"  style={{ textDecoration: "none" }}>
+              <AccountCircleOutlinedIcon className="icon"
+              />
+              <span style={{ fontSize: 17, color: "#333", }}>THÔNG TIN LIÊN HỆ</span>
+            </Link>
           </li>
           <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
+            <ExitToAppIcon className="icon"
+              onClick={() => dispatch({ type: "LOGOUT" })}
+            />
+            <span style={{ fontSize: 17, color: "#333", }}>Logout</span>
           </li>
         </ul>
       </div>
-      {/* <div className="bottom">
-        <div
+      <div className="bottom">
+        {/* <div
           className="colorOption"
           onClick={() => dispatch({ type: "LIGHT" })}
         ></div>
         <div
           className="colorOption"
           onClick={() => dispatch({ type: "DARK" })}
-        ></div>
-      </div> */}
+        ></div> */}
+      </div>
     </div>
   );
 };

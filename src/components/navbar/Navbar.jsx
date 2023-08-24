@@ -7,21 +7,35 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
-import { useContext } from "react";
+
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import { signInWithEmailAndPassword, Auth, getAuth, signOut } from "firebase/auth";
+
+import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext"
+import { useContext, useState } from "react";
+
 const Navbar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  // const { dispatch } = useContext(DarkModeContext);
+  const navitage = useNavigate()
+
+  const { dispatch } = useContext(AuthContext)
+
 
   return (
     <div className="navbar">
       <div className="wrapper">
         <div className="search">
-          <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon />
+          {/* <input type="text" placeholder="Search..." />
+          <SearchOutlinedIcon /> */}
         </div>
         <div className="items">
-           <div className="item">
-            <ExitToAppIcon className="icon" />
+          <div className="item">
+            <div>
+              <ExitToAppIcon className="icon"
+                onClick={() => dispatch({ type: "LOGOUT" })} />
+            </div>
             LOGOUT
           </div>
           {/* <div className="item">

@@ -81,9 +81,9 @@ const New = ({ inputs, title }) => {
       //   ...data,
       //   timeStamp: serverTimestamp(),
       // });
-      const res = await addDoc(collection(db, "users"),{
+      const res = await addDoc(collection(db, "users"), {
         ...data,
-        timeStamp: serverTimestamp(),
+        timeIn: serverTimestamp(),
       });
       navigate(-1)
     } catch (err) {
@@ -97,7 +97,7 @@ const New = ({ inputs, title }) => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>{title}</h1>
+          <h1 style={{ color: "#333", marginTop: "20px", marginLeft: "20px" }}> THÊM SINH VIÊN</h1>
         </div>
         <div className="bottom">
           {/* <div className="left">
@@ -136,7 +136,7 @@ const New = ({ inputs, title }) => {
                 </div>
               ))}
               <button disabled={per !== null && per < 100} type="submit">
-                Send
+                XÁC NHẬN
               </button>
             </form>
           </div>

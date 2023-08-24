@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
 import "./login.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext"
+import { useContext, useState } from "react";
 
 const Login = () => {
   const [error, setError] = useState(false);

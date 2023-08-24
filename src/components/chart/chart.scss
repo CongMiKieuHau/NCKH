@@ -1,11 +1,14 @@
 .chart {
   flex: 4;
-  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(72, 154, 202, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(85, 192, 219, 0.47);
   padding: 10px;
-  color: gray;
+  color: rgb(40, 167, 218);
 
   .title {
+    font-size: large;
+    color:rgb(22, 22, 22);
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 

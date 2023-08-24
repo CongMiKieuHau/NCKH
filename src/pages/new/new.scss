@@ -5,7 +5,7 @@
   .newContainer {
     flex: 6;
 
-    .top,
+    // .top,
     .bottom {
       -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
       box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
@@ -37,8 +37,9 @@
           display: flex;
           flex-wrap: wrap;
           gap: 30px;
-          justify-content: space-around;
-
+          justify-content: left;
+          margin-left: 100px;
+          margin-bottom: 10px;
           .formInput {
             width: 40%;
 

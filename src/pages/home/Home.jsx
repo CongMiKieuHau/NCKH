@@ -17,14 +17,17 @@ const Home = () => {
           <Widget type="product" />
           <Widget type="order" />
           <Widget type="earning" />
-        </div>
-        <div className="charts">
-          <Featured />
-          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
         </div> */}
+        <div className="charts">
+          {/* <Featured /> */}
+          <Chart title="THỐNG KÊ TẦN SUẤT HOẠT ĐỘNG" aspect={4 / 1} />
+        </div>
         <div className="listContainer">
           <div className="listTitle">TRẠNG THÁI HOẠT ĐỘNG CỦA SINH VIÊN</div>
           <Table />
+          <div>
+           
+          </div>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export const userColumns = [
     width: 230,
   },
   {
-    field:"email",
+    field:"Email",
     headerName: "Email", 
     width: 180,
   },
@@ -45,10 +45,20 @@ export const userColumns = [
   //   width: 230,
   // },
    {
-    field:"timeStamp",
+    field:"timeIn",
     headerName:"Thời gian vào",
-    width: 230,
+    width: 180,
   },
+  // {
+  //   field:"timeOut",
+  //   headerName:"Thời gian ra",
+  //   width: 180,
+  // },
+  // {
+  //   field:"time",  
+  //   headerName:"Thời gian",
+  //   width: 180,
+  // },
   {
     field: "status",
     headerName: "TRẠNG THÁI",
@@ -63,3 +73,4 @@ export const userColumns = [
     },
   },
 ];
+
